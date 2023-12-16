@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec2 myPos;
+  attribute vec3 myColor;
+  varying vec3 v_Color;
+
+  void main() {
+    v_Color = myColor;
+    gl_Position = vec4(myPos, 0, 1);
+  }
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  varying vec3 v_Color;
+
+  void main() {
+    gl_FragColor = vec4(v_Color, 1);
+  }
+</script>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+    <meta name="author" content="Jonatan Rasmussen">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script type="text/javascript" src="../../../common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../../../common/MV.js"></script>
+    <script type="text/javascript" src="../../../common/initShaders.js"></script>
+    <script type="text/javascript" src="exercise03.js"></script>
+</head>
+<body>
+    <center>
+        <h2>Worksheet 01 for course 02561 E23 - Exercise 03 by Jonatan Rasmussen s183649</h2>
+        <canvas id="myCanvas" width="512" height="512">
+            Placeholder canvas text. If you can see this, something went wrong!
+        </canvas>
+        <br>
+        <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+    </center>
+</body>
+</html>

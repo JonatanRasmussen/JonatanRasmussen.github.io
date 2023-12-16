@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 07 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas3" width="512" height="512">
+          Placeholder canvas text. If you can see this, something went wrong!
+      </canvas>
+      <br>
+      <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+  <script type="text/javascript" src="../../common/OBJParser.js"></script>
+
+  <!-- PART 3 -->
+  <script id="vertex-shader-3" type="x-shader/x-vertex">
+      attribute vec3 vPosition;
+
+      uniform mat4 worldMatrix;
+      uniform mat4 viewMatrix;
+      uniform mat4 texMatrix;
+
+      varying vec4 fPosition;
+
+      void main() {
+          fPosition = texMatrix * vec4(vPosition, 1);
+
+          gl_Position = viewMatrix * worldMatrix * fPosition;
+          gl_PointSize = 2.0;
+      }
+  </script>
+  <script id="fragment-shader-3" type="x-shader/x-fragment">
+      precision mediump float;
+
+      varying vec4 fPosition;
+
+      uniform vec4 eyePos;
+      uniform bool reflective;
+      uniform samplerCube texMap;
+
+      void main() {
+          vec3 texCoords = normalize(fPosition.xyz);
+
+          if (reflective) {
+              vec4 v = fPosition - eyePos;
+              texCoords = normalize(reflect(v.xyz, fPosition.xyz));
+          }
+
+          gl_FragColor = textureCube(texMap, texCoords);
+      }
+  </script>
+  <script type="text/javascript" src="./exercise03.js"></script>
+
+</body>
+
+</html>

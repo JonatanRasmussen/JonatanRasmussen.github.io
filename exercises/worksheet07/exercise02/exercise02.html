@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 07 for course 02561 E23 - Exercise 2 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas2" width="512" height="512">
+          Placeholder canvas text. If you can see this, something went wrong!
+      </canvas>
+      <br>
+      <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+  <script type="text/javascript" src="../../common/OBJParser.js"></script>
+
+  <!-- PART 2 -->
+  <script id="vertex-shader-2" type="x-shader/x-vertex">
+      attribute vec3 vPosition;
+
+      uniform mat4 worldMatrix;
+      uniform mat4 viewMatrix;
+      uniform mat4 texMatrix;
+
+      varying vec4 fNormal;
+
+      void main() {
+          // normal is the position, since it's a unit sphere
+          fNormal = texMatrix * vec4(vPosition, 1);
+
+          vec4 worldCoord = worldMatrix * fNormal;
+          gl_Position = viewMatrix * worldCoord;
+          gl_PointSize = 2.0;
+      }
+  </script>
+  <script id="fragment-shader-2" type="x-shader/x-fragment">
+      precision mediump float;
+
+      varying vec4 fNormal;
+
+      uniform samplerCube texMap;
+
+      void main() {
+          gl_FragColor = textureCube(texMap, normalize(fNormal.xyz));
+      }
+  </script>
+  <script type="text/javascript" src="./exercise02.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script type="text/javascript" src="../../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../../common/MV.js"></script>
+  <script type="text/javascript" src="../../../common/initShaders.js"></script>
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 06 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas3" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <p>
+          Subdivision level: &nbsp; &nbsp;
+          <button id="increase_subdivision3" class="btn btn-success">Increase</button>
+          <button id="decrease_subdivision3" class="btn btn-warning">Decrease</button>
+      </p>
+    </center>
+    <h5>ANSWER for "Choose a filtering option that betters these minification issues without too much blurring of the texture. Explain your choice.": </h5>
+    <h5>
+      <li>
+          Selection of Texture Filtering Method:
+          <ul>
+              <li>Chosen Method - gl.LINEAR:
+                  <ul>
+                      <li>Opted for gl.LINEAR due to its ability to produce smoother textures compared to gl.NEAREST.</li>
+                      <li>While mipmaps were an option, they were not chosen because they tend to slightly reduce the texture's resolution.</li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+  </h5>
+
+<center>
+    <br>
+    <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+</center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+  <script type="text/javascript" src="../../common/OBJParser.js"></script>
+
+  <!-- PART 3 -->
+  <script id="vertex-shader-3" type="x-shader/x-vertex">
+      attribute vec3 vPosition;
+
+      uniform mat4 worldMatrix;
+      uniform mat4 viewMatrix;
+
+      varying vec4 fNormal;
+      varying float fLight;
+
+      // white, distant, diffuse light
+      vec3 lightDirection = vec3(3, -1, -1);
+
+      void main() {
+          // normal is the position, since it's a unit sphere
+          fNormal = vec4(vPosition, 1);
+
+          vec4 worldCoord = worldMatrix * fNormal;
+          gl_Position = viewMatrix * worldCoord;
+          gl_PointSize = 2.0;
+
+          vec3 lightPosition = normalize(-lightDirection);
+          fLight = 0.3 + max(0.0, dot(worldCoord.xyz, lightPosition));
+      }
+  </script>
+  <script id="fragment-shader-3" type="x-shader/x-fragment">
+      #define M_PI 3.1415926535897932384626433832795
+      precision mediump float;
+
+      varying float fLight;
+      varying vec4 fNormal;
+
+      uniform sampler2D texMap;
+
+      void main() {
+          float phi = atan(fNormal.x, fNormal.z) / (2.0 * M_PI) + 0.5;
+          float theta = fNormal.y * 0.5 + 0.5;
+          vec2 texCoord = vec2(phi, theta);
+          gl_FragColor = vec4(fLight * texture2D(texMap, texCoord).xyz, 1);
+      }
+  </script>
+  <script type="text/javascript" src="./exercise03.js"></script>
+</body>
+
+</html>

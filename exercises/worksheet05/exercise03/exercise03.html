@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 05 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas3" width="512" height="512">
+          Placeholder canvas text. If you can see this, something went wrong!
+      </canvas>
+      <br>
+      <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+  <script type="text/javascript" src="../../common/OBJParser.js"></script>
+    <!-- PART 3 -->
+    <script id="vertex-shader-3" type="x-shader/x-vertex">
+      attribute vec3 a_Position;
+      attribute vec3 a_Normal; // unused
+      attribute vec4 a_Color;
+
+      uniform mat4 modelView;
+      uniform mat4 perspectiveMatrix;
+
+      varying vec4 fColor;
+
+      void main() {
+          fColor = a_Color;
+
+          vec4 cameraPos = modelView * vec4(a_Position, 1);
+          gl_Position = perspectiveMatrix * cameraPos;
+      }
+  </script>
+  <script id="fragment-shader-3" type="x-shader/x-fragment">
+      precision highp float;
+
+      varying vec4 fColor;
+
+      void main() {
+          gl_FragColor = fColor;
+      }
+  </script>
+  <script type="text/javascript" src="./exercise03.js"></script>
+</body>
+
+</html>

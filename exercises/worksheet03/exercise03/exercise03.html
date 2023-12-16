@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+    <meta name="author" content="Jonatan Rasmussen">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script type="text/javascript" src="../../../common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../../../common/MV.js"></script>
+    <script type="text/javascript" src="../../../common/initShaders.js"></script>
+</head>
+<body>
+    <h2>Worksheet 03 for course 02561 E23 - Exercise 03 by Jonatan Rasmussen s183649</h2>
+    <h5>
+        <li>
+            List of Transformation Matrices Used:
+            <ul>
+                <li>In Part 1:
+                    <ul>
+                        <li>Translation Matrix: Used to move the cube within the world coordinate system.</li>
+                        <li>Rotation Matrices: Rotated the cube around the Y-axis and then the X-axis to achieve the isometric view.</li>
+                    </ul>
+                </li>
+                <li>In Part 2:
+                    <ul>
+                        <li>Translation Matrices: Applied to position the cubes differently in the scene for various perspective views.</li>
+                        <li>Scaling Matrix: Scaled the cube to adjust its size in the viewport.</li>
+                        <li>Perspective Matrix: Set up the pinhole camera model with a specific field of view to create a perspective projection.</li>
+                        <li>Look-at Matrix: Defined the position of the camera and where it is looking, affecting the orientation of the cubes in the scene.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Current Transformation Matrix (CTM) Formulas:
+            <ul>
+                <li>For Part 1:
+                    <ul>
+                        <li>The CTM was a combination of rotation and translation matrices applied to the cube vertices. The formula was: CTM = rotateX * rotateY * translate.</li>
+                    </ul>
+                </li>
+                <li>For Part 2 (for different perspectives):
+                    <ul>
+                        <li>1-point Perspective: The formula was CTM = translate * scalem * perspective * look-at. This combination of matrices positioned the cube, scaled it, applied perspective projection, and set the camera view.</li>
+                        <li>2 and 3-point Perspectives: The formula was extended with an additional translation matrix: CTM = translate * scalem * perspective * translate * lookAt. This additional translation allowed for more complex positioning of the cubes in the scene, creating different classical perspective views.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </h5>
+
+    <center>
+        <br>
+        <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+    </center>
+</body>
+</html>

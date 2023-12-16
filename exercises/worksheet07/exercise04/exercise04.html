@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 07 for course 02561 E23 - Exercise 4 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas4" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <br>
+      Experimental:
+      <select id="textureSelect">
+          <option value="default">Mode1</option>
+      </select>
+      <br>
+      <br>
+      <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+  <script type="text/javascript" src="../../common/OBJParser.js"></script>
+
+  <!-- PART 4 -->
+  <script id="vertex-shader-4" type="x-shader/x-vertex">
+      attribute vec3 vPosition;
+
+      uniform mat4 worldMatrix;
+      uniform mat4 viewMatrix;
+      uniform mat4 texMatrix;
+
+      varying vec4 fPosition;
+
+      void main() {
+          fPosition = texMatrix * vec4(vPosition, 1);
+
+          gl_Position = viewMatrix * worldMatrix * fPosition;
+          gl_PointSize = 2.0;
+      }
+  </script>
+  <script id="fragment-shader-4" type="x-shader/x-fragment">
+      #define M_PI 3.1415926535897932384626433832795
+      precision mediump float;
+
+      varying vec4 fPosition;
+
+      uniform vec4 eyePos;
+      uniform bool reflective;
+      uniform samplerCube texMap;
+      uniform sampler2D bumpMap;
+
+      vec3 rotate_to_normal(vec3 normal, vec3 v)
+      {
+        float a = 1.0/(1.0 + normal.z);
+        float b = -normal.x*normal.y*a;
+        return vec3(1.0 - normal.x*normal.x*a, b, -normal.x)*v.x
+             + vec3(b, 1.0 - normal.y*normal.y*a, -normal.y)*v.y
+             + normal*v.z;
+      }
+
+      void main() {
+          vec3 texCoords = normalize(fPosition.xyz);
+
+          if (reflective) {
+              vec4 v = fPosition - eyePos;
+              texCoords = normalize(reflect(v.xyz, fPosition.xyz));
+
+              // bump map
+              float phi = atan(fPosition.x, fPosition.z) / (2.0 * M_PI) + 0.5;
+              float theta = fPosition.y * 0.5 + 0.5;
+              vec2 texCoord = vec2(phi, theta);
+              vec4 bumpVal = texture2D(bumpMap, texCoord);
+              vec4 bumpNorm = 2.0 * bumpVal - 1.0;
+              vec3 finalCoords = rotate_to_normal(texCoords.xyz, bumpNorm.xyz);
+              gl_FragColor = textureCube(texMap, finalCoords);
+              //gl_FragColor = bumpVal;
+          } else {
+              gl_FragColor = textureCube(texMap, texCoords);
+          }
+      }
+  </script>
+  <script type="text/javascript" src="./exercise04.js"></script>
+</body>
+
+</html>

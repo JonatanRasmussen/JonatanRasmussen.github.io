@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script type="text/javascript" src="../../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../../common/MV.js"></script>
+  <script type="text/javascript" src="../../../common/initShaders.js"></script>
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 04 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas3" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <p>
+          Subdivision level: &nbsp; &nbsp;
+          <button id="increase_subdivision3" class="btn btn-success">Increase</button>
+          <button id="decrease_subdivision3" class="btn btn-warning">Decrease</button>
+      </p>
+      <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+
+  <!-- PART 3 -->
+  <script id="vertex-shader-3" type="x-shader/x-vertex">
+      attribute vec3 vPosition;
+      uniform mat4 vMatrix;
+      varying vec3 fColor;
+
+      // diffuse light
+      vec3 lightDirection = vec3(0, 0, -1);
+      vec3 lightColor = vec3(1, 1, 1);
+      vec3 diffuse = vec3(1, 1, 1);
+
+      void main() {
+          gl_Position = vMatrix * vec4(vPosition, 1);
+          gl_PointSize = 2.0;
+
+          vec3 baseColor = vPosition * sqrt(3.0) * 0.5 + 0.5;
+          //vec3 baseColor = vec3(0, 0, 1);
+
+          // vPosition is the normal to the surface as it is a unit sphere
+          vec3 lightPosition = -lightDirection;
+          float intensity = max(0.0, dot(vPosition, lightPosition));
+
+          fColor = intensity * diffuse * lightColor * baseColor;
+      }
+  </script>
+  <script id="fragment-shader-3" type="x-shader/x-fragment">
+      precision mediump float;
+      varying vec3 fColor;
+
+      void main() {
+          gl_FragColor = vec4(fColor, 1);
+      }
+  </script>
+  <script type="text/javascript" src="./exercise03.js"></script>
+</body>
+
+</html>

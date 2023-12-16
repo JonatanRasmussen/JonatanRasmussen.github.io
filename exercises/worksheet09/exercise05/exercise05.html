@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+    <meta name="author" content="Jonatan Rasmussen">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script type="text/javascript" src="../../../common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../../../common/MV.js"></script>
+    <script type="text/javascript" src="../../../common/initShaders.js"></script>
+</head>
+<body>
+    <h2>Worksheet 09 for course 02561 E23 - Exercise 5 by Jonatan Rasmussen s183649</h2>
+    <h5>
+      <li>
+        Comparison of Projection Shadows and Shadow Mapping:
+        <ul>
+            <li>Projection Shadows:
+                <ul>
+                    <li>Advantages:
+                        <ul>
+                            <li>Simple to implement and not demanding in terms of computation.</li>
+                            <li>Cost-effective in terms of processing power.</li>
+                        </ul>
+                    </li>
+                    <li>Disadvantages:
+                        <ul>
+                            <li>Primarily effective for shadows on flat surfaces.</li>
+                            <li>Limited options for altering the shadow's hue.</li>
+                            <li>Unable to create shadows of the object onto itself.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Shadow Mapping:
+                <ul>
+                    <li>Advantages:
+                        <ul>
+                            <li>Capable of rendering self-shadows.</li>
+                            <li>Offers flexibility in merging the colors of the shadow and the shadowed object.</li>
+                            <li>Suitable for objects of various complexities.</li>
+                        </ul>
+                    </li>
+                    <li>Disadvantages:
+                        <ul>
+                            <li>More complex to set up, requiring additional shaders and framebuffer objects.</li>
+                            <li>Can be less efficient due to the need for an intermediate texture.</li>
+                            <li>Prone to issues like aliasing and shimmering due to texture usage.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </
+
+    </h5>
+
+    <center>
+        <br>
+        <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+    </center>
+</body>
+</html>

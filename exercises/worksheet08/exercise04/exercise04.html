@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Worksheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+  <meta name="author" content="Jonatan Rasmussen">
+  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <center>
+      <h2>Worksheet 08 for course 02561 E23 - Exercise 4 by Jonatan Rasmussen s183649</h2>
+      <canvas id="canvas4" width="512" height="512">
+          Placeholder canvas text. If you can see this, something went wrong!
+      </canvas>
+      <br>
+      <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+</body>
+<body>
+
+  <script type="text/javascript" src="../../common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../../common/initShaders.js"></script>
+  <script type="text/javascript" src="../../common/MV.js"></script>
+  <script type="text/javascript" src="../../common/OBJParser.js"></script>
+  <script type="text/javascript" src="../../common/simple_camera.js"></script>
+
+
+  <!-- PARTS 1 + 2 + 3 -->
+  <script id="vertex-shader-1" type="x-shader/x-vertex">
+      attribute vec3 position;
+      attribute vec2 texPosition;
+
+      uniform mat4 modelView;
+      uniform mat4 perspective;
+
+      varying vec2 fTexCoord;
+
+      void main() {
+          fTexCoord = texPosition;
+          gl_Position = perspective * modelView * vec4(position, 1);
+      }
+  </script>
+  <script id="fragment-shader-1" type="x-shader/x-fragment">
+      precision mediump float;
+
+      varying vec2 fTexCoord;
+      uniform sampler2D texture;
+
+      void main() {
+          gl_FragColor = texture2D(texture, fTexCoord);
+      }
+  </script>
+  <script id="fragment-shader-3" type="x-shader/x-fragment">
+      precision mediump float;
+
+      varying vec2 fTexCoord;
+      uniform sampler2D texture;
+      uniform float visible;
+
+      void main() {
+          gl_FragColor = vec4(vec3(visible), 1) * texture2D(texture, fTexCoord);
+      }
+  </script>
+  <!-- PART 4 -->
+  <script id="fragment-shader-4" type="x-shader/x-fragment">
+      precision mediump float;
+
+      varying vec2 fTexCoord;
+      uniform sampler2D texture;
+      uniform bool visible;
+
+      void main() {
+          if (visible) {
+              gl_FragColor = texture2D(texture, fTexCoord);
+          } else {
+              gl_FragColor = vec4(0, 0, 0, 0.5);
+          }
+      }
+  </script>
+  <script type="text/javascript" src="./exercise04.js"></script>
+</body>
+
+</html>

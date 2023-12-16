@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec2 myPos;
+  attribute vec3 myColor;
+  varying vec4 color;
+
+  void main(){
+    gl_PointSize = 12.0;
+    gl_Position = vec4(myPos, 0.0, 1.0);
+    color = vec4(myColor, 1.0);
+  }
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  varying vec4 color;
+
+  void main(){
+    gl_FragColor = color;
+  }
+</script>
+
+
+<script type="text/javascript" src="../../../common/webgl-utils.js"></script>
+<script type="text/javascript" src="../../../common/MV.js"></script>
+<script type="text/javascript" src="../../../common/initShaders.js"></script>
+<script type="text/javascript" src="exercise03.js"></script>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Worhsheet for 02561 - Exercise by Jonatan Rasmussen s183649</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Jonatan Rasmussen">
+    <link rel="stylesheet" href="../../../css/style.css">
+  </head>
+  <body>
+    <center>
+      <h2>Worksheet 02 for course 02561 E23 - Exercise 03 by Jonatan Rasmussen s183649</h2>
+  <table>
+  <tbody>
+  <tr>
+  <td>
+    <canvas id="myCanvas" width="512" height="512">
+      Placeholder canvas text. If you can see this, something went wrong!
+    </canvas>
+    <br>
+    <button onclick="window.location.href='../../../index.html';">Return to Main Page</button>
+  </center>
+  </td>
+  <td>
+    <table style="width: 0%;background-color: #33937F;" >
+    <tbody>
+    <tr>
+    <td>
+      <font color="white">Drawing mode:
+        <br>
+          <button id="addPoints">Points</button> <button id="addTriangles">Triangles</button>
+        </td>
+        <td></td>
+      </tr>
+    <tr>
+    <td>
+      <font color="magenta">Geometry color
+        <br>
+      <select id="colorMenu" size="7">
+      <option value="0">Light Blue</option>
+      <option value="1">White</option>
+      <option value="2">Black</option>
+      <option value="3">Cyan</option>
+      <option value="4" selected>Magenta</option>
+      <option value="5">Brown</option>
+      </select>
+    </td>
+    <td></td>
+    </tr>
+    <td><br>
+      <font color="blue">Background color
+        <br>
+      <select id="clearMenu" size="7">
+        <option value="0" selected>Light Blue</option>
+        <option value="1">White</option>
+        <option value="2">Black</option>
+        <option value="3">Cyan</option>
+        <option value="4">Magenta</option>
+        <option value="5">Brown</option>
+      </select>
+    </td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><button id="clearButton">Reset Canvas</button><br></td>
+    <td>&nbsp;</td>
+    </tr>
+    </tbody>
+    </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </center>
+
+  </body>
+</html>
