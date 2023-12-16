@@ -32,7 +32,7 @@ function context() {
     // OBJ file has been read
     function onReadOBJFile(fileString, fileName, scale, reverse) {
         var objDoc = new OBJDoc(fileName); // Create a OBJDoc object
-        var result = objDoc.parse(fileString, scale, reverse);
+        var result = objDoc.parse(fileString, 0.003*scale, reverse);
 
         if (!result) {
             g_objDoc = null;
