@@ -14,7 +14,7 @@
 <body>
   <center>
       <h2>Worksheet 06 for course 02561 E23 - Exercise 1 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas1" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <canvas id="canvas_A" width="512" height="512">Please use a browser supporting HTML5</canvas>
       <p>
           <label for="filtering">Filtering mode</label>&nbsp;
           <select id="filtering">
@@ -42,34 +42,34 @@
   <script type="text/javascript" src="../../common/MV.js"></script>
   <script type="text/javascript" src="../../common/OBJParser.js"></script>
 
-  <!-- PART 1 + 2 -->
+  <!-- script 1 + 2 -->
   <script id="vertex-shader-1" type="x-shader/x-vertex">
-      attribute vec3 a_Position;
-      attribute vec3 a_Color;
+      attribute vec3 a_var_Pos;
+      attribute vec3 a_var_Colour;
       attribute vec2 a_TexPosition;
 
       uniform mat4 modelView;
-      uniform mat4 perspectiveMatrix;
+      uniform mat4 pspMtrx;
 
-      varying vec3 fColor;
+      varying vec3 fVarColour;
       varying vec2 fTexCoord;
 
       void main() {
-          fColor = a_Color;
+          fVarColour = a_var_Colour;
           fTexCoord = a_TexPosition;
 
-          gl_Position = perspectiveMatrix * modelView * vec4(a_Position, 1);
+          gl_Position = pspMtrx * modelView * vec4(a_var_Pos, 1);
       }
   </script>
   <script id="fragment-shader-1" type="x-shader/x-fragment">
       precision mediump float;
 
-      varying vec3 fColor;
+      varying vec3 fVarColour;
       varying vec2 fTexCoord;
       uniform sampler2D texMap;
 
       void main() {
-          gl_FragColor = vec4(fColor, 1) * texture2D(texMap, fTexCoord);
+          gl_FragColor = vec4(fVarColour, 1) * texture2D(texMap, fTexCoord);
       }
   </script>
   <script type="text/javascript" src="./exercise01.js"></script>

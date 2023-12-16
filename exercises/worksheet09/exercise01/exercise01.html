@@ -10,7 +10,7 @@
 <body>
   <center>
       <h2>Worksheet 09 for course 02561 E23 - Exercise 1 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas1" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <canvas id="canvas_A" width="512" height="512">Please use a browser supporting HTML5</canvas>
       <div>
         <div>Swap lighting <input id="lightMove1" type="checkbox" checked /></div>
         <div>Hover <input id="bounce1" type="checkbox" checked /></div>
@@ -27,7 +27,7 @@
   <script type="text/javascript" src="../../common/MV.js"></script>
   <script type="text/javascript" src="../../common/OBJParser.js"></script>
 
-  <!-- PART 1 - GROUND -->
+  <!-- script 1 - GROUND -->
   <script id="vertex-shader-ground-1" type="x-shader/x-vertex">
       attribute vec3 position;
       attribute vec2 texPosition;
@@ -53,33 +53,33 @@
       }
   </script>
 
-  <!-- PART 1 - TEAPOT -->
+  <!-- script 1 - TEAPOT -->
   <script id="vertex-shader-teapot-1" type="x-shader/x-vertex">
       attribute vec3 position;
       attribute vec3 normal;
       attribute vec4 color;
 
       uniform mat4 modelView;
-      uniform mat4 perspectiveMatrix;
+      uniform mat4 pspMtrx;
 
-      varying vec4 fColor;
+      varying vec4 fVarColour;
 
       void main() {
-          fColor = color;
+          fVarColour = color;
 
-          vec4 cameraPos = modelView * vec4(position, 1);
-          gl_Position = perspectiveMatrix * cameraPos;
+          vec4 cmraVarPosition = modelView * vec4(position, 1);
+          gl_Position = pspMtrx * cmraVarPosition;
       }
   </script>
   <script id="fragment-shader-teapot-1" type="x-shader/x-fragment">
       precision highp float;
 
-      varying vec4 fColor;
+      varying vec4 fVarColour;
       uniform bool visible;
 
       void main() {
           if (visible) {
-              gl_FragColor = fColor;
+              gl_FragColor = fVarColour;
           } else {
               gl_FragColor = vec4(0, 0, 0, 1);
           }

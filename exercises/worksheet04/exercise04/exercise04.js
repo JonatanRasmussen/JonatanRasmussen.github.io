@@ -9,7 +9,7 @@ function setupWebGL(canvas) {
 
 function context() {
     // Prepare WebGL
-    var canvas = document.getElementById("canvas4");
+    var canvas = document.getElementById("canvas_D");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -93,14 +93,14 @@ function context() {
             rotateY(time / 61),
         ].reduce(mult);
 
-        var perspectiveMatrix = perspective(45, 1, 1, 6);
+        var pspMtrx = perspective(45, 1, 1, 6);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(modelViewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(modelViewMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'perspectiveMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'pspMtrx');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
         }
 
         var uniforms = {
@@ -116,13 +116,13 @@ function context() {
         };
 
         for (key in uniforms) {
-            let uLocation = gl.getUniformLocation(program, key);
-            gl.uniform1f(uLocation, uniforms[key]);
+            let u_var_Loc = gl.getUniformLocation(program, key);
+            gl.uniform1f(u_var_Loc, uniforms[key]);
         }
 
         {
-            let uLocation = gl.getUniformLocation(program, 'lightEmission');
-            gl.uniform3fv(uLocation, uniforms['emission']);
+            let u_var_Loc = gl.getUniformLocation(program, 'lightEmission');
+            gl.uniform3fv(u_var_Loc, uniforms['emission']);
         }
 
         // points

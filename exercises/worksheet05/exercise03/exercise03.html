@@ -10,7 +10,7 @@
 <body>
   <center>
       <h2>Worksheet 05 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas3" width="512" height="512">
+      <canvas id="canvas_C" width="512" height="512">
           Placeholder canvas text. If you can see this, something went wrong!
       </canvas>
       <br>
@@ -23,31 +23,31 @@
   <script type="text/javascript" src="../../common/initShaders.js"></script>
   <script type="text/javascript" src="../../common/MV.js"></script>
   <script type="text/javascript" src="../../common/OBJParser.js"></script>
-    <!-- PART 3 -->
+    <!-- script 3 -->
     <script id="vertex-shader-3" type="x-shader/x-vertex">
-      attribute vec3 a_Position;
-      attribute vec3 a_Normal; // unused
-      attribute vec4 a_Color;
+      attribute vec3 a_var_Pos;
+      attribute vec3 a_var_Nml; // unused
+      attribute vec4 a_var_Colour;
 
       uniform mat4 modelView;
-      uniform mat4 perspectiveMatrix;
+      uniform mat4 pspMtrx;
 
-      varying vec4 fColor;
+      varying vec4 fVarColour;
 
       void main() {
-          fColor = a_Color;
+          fVarColour = a_var_Colour;
 
-          vec4 cameraPos = modelView * vec4(a_Position, 1);
-          gl_Position = perspectiveMatrix * cameraPos;
+          vec4 cmraVarPosition = modelView * vec4(a_var_Pos, 1);
+          gl_Position = pspMtrx * cmraVarPosition;
       }
   </script>
   <script id="fragment-shader-3" type="x-shader/x-fragment">
       precision highp float;
 
-      varying vec4 fColor;
+      varying vec4 fVarColour;
 
       void main() {
-          gl_FragColor = fColor;
+          gl_FragColor = fVarColour;
       }
   </script>
   <script type="text/javascript" src="./exercise03.js"></script>

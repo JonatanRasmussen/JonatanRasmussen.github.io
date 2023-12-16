@@ -9,7 +9,7 @@ function setupWebGL(canvas) {
 
 function context() {
     // Prepare WebGL
-    var canvas = document.getElementById("canvas3");
+    var canvas = document.getElementById("canvas_C");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -159,14 +159,14 @@ function context() {
         ].reduce(mult);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'worldMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(worldMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'worldMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(worldMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'viewMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(viewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'viewMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(viewMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'eyePos');
-            gl.uniform4fv(uLocation, flatten(mult(inverse(worldMatrix), vec4(0, 0, 0, 1))));
+            let u_var_Loc = gl.getUniformLocation(program, 'eyePos');
+            gl.uniform4fv(u_var_Loc, flatten(mult(inverse(worldMatrix), vec4(0, 0, 0, 1))));
         }
 
         var texMatrix = [
@@ -175,22 +175,22 @@ function context() {
         ].reduce(mult);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'texMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(texMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'texMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(texMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'reflective');
-            gl.uniform1i(uLocation, false);
+            let u_var_Loc = gl.getUniformLocation(program, 'reflective');
+            gl.uniform1i(u_var_Loc, false);
         }
 
         // background
         gl.drawArrays(gl.TRIANGLES, 0, 36);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'texMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(program, 'texMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
         } {
-            let uLocation = gl.getUniformLocation(program, 'reflective');
-            gl.uniform1i(uLocation, true);
+            let u_var_Loc = gl.getUniformLocation(program, 'reflective');
+            gl.uniform1i(u_var_Loc, true);
         }
 
         gl.drawArrays(gl.TRIANGLES, 36, elems.length - 36);

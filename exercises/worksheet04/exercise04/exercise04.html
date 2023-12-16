@@ -14,7 +14,7 @@
 <body>
   <center>
       <h2>Worksheet 04 for course 02561 E23 - Exercise 4 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas4" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <canvas id="canvas_D" width="512" height="512">Please use a browser supporting HTML5</canvas>
       <p>
           Subdivision level: &nbsp; &nbsp;
           <button id="increase_subdivision4" class="btn btn-success">Increase</button>
@@ -52,12 +52,12 @@
   <script type="text/javascript" src="../../common/initShaders.js"></script>
   <script type="text/javascript" src="../../common/MV.js"></script>
 
-  <!-- PART 4 -->
+  <!-- script 4 -->
   <script id="vertex-shader-4" type="x-shader/x-vertex">
       attribute vec3 position;
 
       uniform mat4 modelView;
-      uniform mat4 perspectiveMatrix;
+      uniform mat4 pspMtrx;
 
       uniform float Ka;
       uniform float Kd;
@@ -65,18 +65,18 @@
       uniform float shininess;
       uniform vec3 lightEmission;
 
-      varying vec3 fColor;
+      varying vec3 fVarColour;
 
       // diffuse light
-      vec4 lightDirection = vec4(0, 0, -1, 0);
+      vec4 lghtDir = vec4(0, 0, -1, 0);
 
       void main() {
-          vec4 cameraPos = modelView * vec4(position, 1);
+          vec4 cmraVarPosition = modelView * vec4(position, 1);
 
-          gl_Position = perspectiveMatrix * cameraPos;
+          gl_Position = pspMtrx * cmraVarPosition;
 
           vec4 N = normalize(modelView * vec4(position, 0));
-          vec4 L = normalize(modelView * -lightDirection);
+          vec4 L = normalize(modelView * -lghtDir);
 
           // ambient term
           vec3 ambient = Ka * lightEmission;
@@ -86,7 +86,7 @@
           vec3 diffuse = Kd * lightEmission * lambertian;
 
           // specular term
-          vec4 V = normalize(-cameraPos);
+          vec4 V = normalize(-cmraVarPosition);
           vec4 R = normalize(reflect(-L, N));
 
           vec3 specular = vec3(0);
@@ -98,15 +98,15 @@
 
           // final color
           vec3 baseColor = position * 0.5 + 0.5;
-          fColor = baseColor * (ambient + diffuse + specular);
+          fVarColour = baseColor * (ambient + diffuse + specular);
       }
   </script>
   <script id="fragment-shader-4" type="x-shader/x-fragment">
       precision mediump float;
-      varying vec3 fColor;
+      varying vec3 fVarColour;
 
       void main() {
-          gl_FragColor = vec4(fColor, 1);
+          gl_FragColor = vec4(fVarColour, 1);
       }
   </script>
   <script type="text/javascript" src="./exercise04.js"></script>

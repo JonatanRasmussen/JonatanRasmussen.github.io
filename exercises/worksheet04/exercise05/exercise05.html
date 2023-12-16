@@ -14,7 +14,7 @@
 <body>
   <center>
       <h2>Worksheet 04 for course 02561 E23 - Exercise 5 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas5" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <canvas id="canvas_E" width="512" height="512">Please use a browser supporting HTML5</canvas>
       <p>
           Subdivision level: &nbsp; &nbsp;
           <button id="increase_subdivision5" class="btn btn-success">Increase</button>
@@ -74,28 +74,28 @@
   <script type="text/javascript" src="../../common/initShaders.js"></script>
   <script type="text/javascript" src="../../common/MV.js"></script>
 
-  <!-- PART 5 -->
+  <!-- script 5 -->
   <script id="vertex-shader-5" type="x-shader/x-vertex">
       attribute vec3 position;
 
       uniform mat4 modelView;
-      uniform mat4 perspectiveMatrix;
+      uniform mat4 pspMtrx;
 
       // I only normalize positions as normals can be calculated from them
       // since it's a unit sphere
-      varying vec4 fPosition;
+      varying vec4 fVarPos;
 
       void main() {
-          fPosition = vec4(position, 1);
+          fVarPos = vec4(position, 1);
 
-          vec4 cameraPos = modelView * vec4(position, 1);
-          gl_Position = perspectiveMatrix * cameraPos;
+          vec4 cmraVarPosition = modelView * vec4(position, 1);
+          gl_Position = pspMtrx * cmraVarPosition;
       }
   </script>
   <script id="fragment-shader-5" type="x-shader/x-fragment">
       precision highp float;
 
-      varying vec4 fPosition;
+      varying vec4 fVarPos;
 
       uniform float Ka;
       uniform float Kd;
@@ -105,15 +105,15 @@
 
       uniform mat4 modelView;
 
-      vec4 lightDirection = vec4(0, 0, -1, 0);
+      vec4 lghtDir = vec4(0, 0, -1, 0);
 
       void main() {
-          vec4 cameraPos = modelView * fPosition;
+          vec4 cmraVarPosition = modelView * fVarPos;
 
           // normally we interpolate position, normals and light position
           // here, we can simplify, because it's a unit sphere and the light is distant
-          vec4 N = normalize(modelView * vec4(fPosition.xyz, 0));
-          vec4 L = normalize(modelView * -lightDirection);
+          vec4 N = normalize(modelView * vec4(fVarPos.xyz, 0));
+          vec4 L = normalize(modelView * -lghtDir);
 
           // ambient term
           vec3 ambient = Ka * lightEmission;
@@ -123,7 +123,7 @@
           vec3 diffuse = Kd * lightEmission * lambertian;
 
           // specular term
-          vec4 V = normalize(-cameraPos);
+          vec4 V = normalize(-cmraVarPosition);
           vec4 R = normalize(reflect(-L, N));
 
           vec3 specular = vec3(0);
@@ -134,7 +134,7 @@
           }
 
           // final color
-          vec3 baseColor = fPosition.xyz * 0.5 + 0.5;
+          vec3 baseColor = fVarPos.xyz * 0.5 + 0.5;
           gl_FragColor = vec4(baseColor * (ambient + diffuse + specular), 1);
       }
   </script>

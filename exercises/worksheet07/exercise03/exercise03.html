@@ -10,7 +10,7 @@
 <body>
   <center>
       <h2>Worksheet 07 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas3" width="512" height="512">
+      <canvas id="canvas_C" width="512" height="512">
           Placeholder canvas text. If you can see this, something went wrong!
       </canvas>
       <br>
@@ -24,7 +24,7 @@
   <script type="text/javascript" src="../../common/MV.js"></script>
   <script type="text/javascript" src="../../common/OBJParser.js"></script>
 
-  <!-- PART 3 -->
+  <!-- script 3 -->
   <script id="vertex-shader-3" type="x-shader/x-vertex">
       attribute vec3 vPosition;
 
@@ -32,30 +32,30 @@
       uniform mat4 viewMatrix;
       uniform mat4 texMatrix;
 
-      varying vec4 fPosition;
+      varying vec4 fVarPos;
 
       void main() {
-          fPosition = texMatrix * vec4(vPosition, 1);
+          fVarPos = texMatrix * vec4(vPosition, 1);
 
-          gl_Position = viewMatrix * worldMatrix * fPosition;
+          gl_Position = viewMatrix * worldMatrix * fVarPos;
           gl_PointSize = 2.0;
       }
   </script>
   <script id="fragment-shader-3" type="x-shader/x-fragment">
       precision mediump float;
 
-      varying vec4 fPosition;
+      varying vec4 fVarPos;
 
       uniform vec4 eyePos;
       uniform bool reflective;
       uniform samplerCube texMap;
 
       void main() {
-          vec3 texCoords = normalize(fPosition.xyz);
+          vec3 texCoords = normalize(fVarPos.xyz);
 
           if (reflective) {
-              vec4 v = fPosition - eyePos;
-              texCoords = normalize(reflect(v.xyz, fPosition.xyz));
+              vec4 v = fVarPos - eyePos;
+              texCoords = normalize(reflect(v.xyz, fVarPos.xyz));
           }
 
           gl_FragColor = textureCube(texMap, texCoords);

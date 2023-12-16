@@ -9,7 +9,7 @@ function setupWebGL(canvas) {
 
 function context() {
     // Prepare WebGL
-    var canvas = document.getElementById("canvas4");
+    var canvas = document.getElementById("canvas_D");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -157,7 +157,7 @@ function context() {
         gl.activeTexture(gl.TEXTURE0);
         gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture);
         gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, flip); // only for default cube texture
-        
+
         for (let info of faceInfos) {
             const {
                 target,
@@ -222,21 +222,21 @@ function context() {
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
         // view
-        var worldMatrix = [translate(0, 0, -3), rotateY(-time / 30)].reduce(mult);
+        var worldMatrix = [translate(0, 0, -3), rotateY(-time / 121)].reduce(mult);
 
         var viewMatrix = [
             perspective(90, 1, 1, 20)
         ].reduce(mult);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'worldMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(worldMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'worldMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(worldMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'viewMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(viewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'viewMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(viewMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'eyePos');
-            gl.uniform4fv(uLocation, flatten(mult(inverse(worldMatrix), vec4(0, 0, 0, 1))));
+            let u_var_Loc = gl.getUniformLocation(program, 'eyePos');
+            gl.uniform4fv(u_var_Loc, flatten(mult(inverse(worldMatrix), vec4(0, 0, 0, 1))));
         }
 
         var texMatrix = [
@@ -245,22 +245,22 @@ function context() {
         ].reduce(mult);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'texMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(texMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'texMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(texMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'reflective');
-            gl.uniform1i(uLocation, false);
+            let u_var_Loc = gl.getUniformLocation(program, 'reflective');
+            gl.uniform1i(u_var_Loc, false);
         }
 
         // background
         gl.drawArrays(gl.TRIANGLES, 0, 36);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'texMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(program, 'texMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
         } {
-            let uLocation = gl.getUniformLocation(program, 'reflective');
-            gl.uniform1i(uLocation, true);
+            let u_var_Loc = gl.getUniformLocation(program, 'reflective');
+            gl.uniform1i(u_var_Loc, true);
         }
 
         gl.drawArrays(gl.TRIANGLES, 36, elems.length - 36);

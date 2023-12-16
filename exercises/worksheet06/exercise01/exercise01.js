@@ -44,7 +44,7 @@ function createChessboard() {
 
 function context() {
     // Prepare WebGL
-    let canvas = document.getElementById("canvas1");
+    let canvas = document.getElementById("canvas_A");
     let gl = setupWebGL(canvas);
 
     // Load shaders
@@ -57,10 +57,10 @@ function context() {
     const texCoords = [vec2(-1.5, 0), vec2(2.5, 0), vec2(2.5, 10), vec2(-1.5, 10)];
     const indices = [0, 1, 2, 0, 2, 3];
 
-    const vertexBuffer = createEmptyArrayBuffer(gl, program, 'a_Position', 3, gl.FLOAT);
+    const vertexBuffer = createEmptyArrayBuffer(gl, program, 'a_var_Pos', 3, gl.FLOAT);
     gl.bufferData(gl.ARRAY_BUFFER, flatten(vertices), gl.STATIC_DRAW);
 
-    const colorBuffer = createEmptyArrayBuffer(gl, program, 'a_Color', 3, gl.FLOAT);
+    const colorBuffer = createEmptyArrayBuffer(gl, program, 'a_var_Colour', 3, gl.FLOAT);
     gl.bufferData(gl.ARRAY_BUFFER, flatten(colors), gl.STATIC_DRAW);
 
     const texCoordsBuffer = createEmptyArrayBuffer(gl, program, 'a_TexPosition', 2, gl.FLOAT);
@@ -123,14 +123,14 @@ function context() {
             mat4()
         ].reduce(mult);
 
-        let perspectiveMatrix = perspective(90, 1, 1, 50);
+        let pspMtrx = perspective(90, 1, 1, 50);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(modelViewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(modelViewMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'perspectiveMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'pspMtrx');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
         }
 
         gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_BYTE, 0);

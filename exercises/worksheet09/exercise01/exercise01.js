@@ -70,7 +70,7 @@ function context() {
     // LOAD THE TEAPOT
 
     // Prepare WebGL
-    var canvas = document.getElementById("canvas1");
+    var canvas = document.getElementById("canvas_A");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -195,21 +195,21 @@ function context() {
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, groundModel.indexBuffer);
 
         // common perspective + lookAt
-        let perspectiveMatrix = [
+        let pspMtrx = [
             perspective(90, 1, 1, 20),
             lookAt(lookDown ? vec3(0, 2, -2.99) : vec3(0, 0, 0), vec3(0, 0, -3), vec3(0, 1, 0)),
         ].reduce(mult);
 
         // ground perspective
         {
-            let uLocation = gl.getUniformLocation(groundProgram, 'perspective');
-            gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+            let u_var_Loc = gl.getUniformLocation(groundProgram, 'perspective');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
         }
 
         // ground modelView
         {
-            let uLocation = gl.getUniformLocation(groundProgram, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(groundProgram, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
         }
         gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_BYTE, 0);
 
@@ -248,8 +248,8 @@ function context() {
                     modelViewMatrix
                 ].reduce(mult);
 
-                let uLocation = gl.getUniformLocation(teapotProgram, 'modelView');
-                gl.uniformMatrix4fv(uLocation, false, flatten(modelView));
+                let u_var_Loc = gl.getUniformLocation(teapotProgram, 'modelView');
+                gl.uniformMatrix4fv(u_var_Loc, false, flatten(modelView));
 
                 // shadow mode
                 let visLocation = gl.getUniformLocation(teapotProgram, 'visible');
@@ -261,11 +261,11 @@ function context() {
 
             // THEN, THE TEAPOT
             {
-                let uLocation = gl.getUniformLocation(teapotProgram, 'modelView');
-                gl.uniformMatrix4fv(uLocation, false, flatten(modelViewMatrix));
+                let u_var_Loc = gl.getUniformLocation(teapotProgram, 'modelView');
+                gl.uniformMatrix4fv(u_var_Loc, false, flatten(modelViewMatrix));
             } {
-                let uLocation = gl.getUniformLocation(teapotProgram, 'perspectiveMatrix');
-                gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+                let u_var_Loc = gl.getUniformLocation(teapotProgram, 'pspMtrx');
+                gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
             }
 
             // normal mode

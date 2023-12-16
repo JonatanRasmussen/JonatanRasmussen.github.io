@@ -9,7 +9,7 @@ function setupWebGL(canvas) {
 
 function context() {
     // Prepare WebGL
-    var canvas = document.getElementById("canvas2");
+    var canvas = document.getElementById("canvas_B");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -93,8 +93,8 @@ function context() {
             rotateY(time / 61),
         ].reduce(mult);
 
-        let uLocation = gl.getUniformLocation(program, 'vMatrix');
-        gl.uniformMatrix4fv(uLocation, false, flatten(viewMatrix));
+        let u_var_Loc = gl.getUniformLocation(program, 'vMatrix');
+        gl.uniformMatrix4fv(u_var_Loc, false, flatten(viewMatrix));
 
         // points
         gl.drawArrays(gl.TRIANGLES, 0, elems.length);

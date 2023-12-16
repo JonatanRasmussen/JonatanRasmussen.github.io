@@ -10,7 +10,7 @@
 <body>
   <center>
       <h2>Worksheet 07 for course 02561 E23 - Exercise 1 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas1" width="512" height="512">
+      <canvas id="canvas_A" width="512" height="512">
           Placeholder canvas text. If you can see this, something went wrong!
       </canvas>
       <br>
@@ -24,20 +24,20 @@
   <script type="text/javascript" src="../../common/MV.js"></script>
   <script type="text/javascript" src="../../common/OBJParser.js"></script>
 
-  <!-- PART 1 -->
+  <!-- script 1 -->
   <script id="vertex-shader-1" type="x-shader/x-vertex">
       attribute vec3 vPosition;
 
       uniform mat4 worldMatrix;
       uniform mat4 viewMatrix;
 
-      varying vec4 fNormal;
+      varying vec4 fVarNml;
 
       void main() {
           // normal is the position, since it's a unit sphere
-          fNormal = vec4(vPosition, 1);
+          fVarNml = vec4(vPosition, 1);
 
-          vec4 worldCoord = worldMatrix * fNormal;
+          vec4 worldCoord = worldMatrix * fVarNml;
           gl_Position = viewMatrix * worldCoord;
           gl_PointSize = 2.0;
       }
@@ -45,12 +45,12 @@
   <script id="fragment-shader-1" type="x-shader/x-fragment">
       precision mediump float;
 
-      varying vec4 fNormal;
+      varying vec4 fVarNml;
 
       uniform samplerCube texMap;
 
       void main() {
-          gl_FragColor = textureCube(texMap, normalize(fNormal.xyz));
+          gl_FragColor = textureCube(texMap, normalize(fVarNml.xyz));
       }
   </script>
   <script type="text/javascript" src="./exercise01.js"></script>

@@ -9,7 +9,7 @@ function setupWebGL(canvas) {
 
 function context() {
     // Prepare WebGL
-    var canvas = document.getElementById("canvas3");
+    var canvas = document.getElementById("canvas_C");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -116,11 +116,11 @@ function context() {
         ].reduce(mult);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'worldMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(worldMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'worldMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(worldMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'viewMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(viewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'viewMatrix');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(viewMatrix));
         }
 
         // points

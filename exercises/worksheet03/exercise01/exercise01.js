@@ -9,7 +9,7 @@ function setupWebGL(canvasElement) {
 function renderContext() {
 
 
-    var canvasEl = document.getElementById("canvas1");
+    var canvasEl = document.getElementById("canvas_A");
     var webGLContext = setupWebGL(canvasEl);
 
     var shaderProgram = initShaders(webGLContext, "vertex-shader-1", "fragment-shader-1");
@@ -87,8 +87,8 @@ function renderContext() {
 
         var viewMatrix = [rotateX(-35), rotateY(-45), translate(-.6, -.6, -.6)].reduce(mult);
 
-        let uLocation = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
-        webGLContext.uniformMatrix4fv(uLocation, false, flatten(viewMatrix));
+        let u_var_Loc = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
+        webGLContext.uniformMatrix4fv(u_var_Loc, false, flatten(viewMatrix));
 
         webGLContext.drawElements(webGLContext.LINES, indicesArray.length, webGLContext.UNSIGNED_BYTE, 0);
         window.requestAnimationFrame(drawScene);

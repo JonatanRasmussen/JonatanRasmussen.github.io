@@ -14,7 +14,7 @@
 <body>
   <center>
       <h2>Worksheet 04 for course 02561 E23 - Exercise 1 by Jonatan Rasmussen s183649</h2>
-        <canvas id="canvas2" width="512" height="512">Please use a browser supporting HTML5</canvas>
+        <canvas id="canvas_B" width="512" height="512">Please use a browser supporting HTML5</canvas>
         <p>
             Increase / decrease subdivision level: &nbsp; &nbsp;
             <button id="increase_subdivision2" class="btn btn-success">Increase</button>
@@ -30,23 +30,23 @@
   <script type="text/javascript" src="../../common/initShaders.js"></script>
   <script type="text/javascript" src="../../common/MV.js"></script>
 
-  <!-- PART 2 -->
+  <!-- script 2 -->
   <script id="vertex-shader-2" type="x-shader/x-vertex">
       attribute vec3 vPosition;
       uniform mat4 vMatrix;
-      varying vec3 fColor;
+      varying vec3 fVarColour;
 
       void main() {
           gl_Position = vMatrix * vec4(vPosition, 1);
-          fColor = sqrt(3.0) * 0.5 * vPosition + 0.5;
+          fVarColour = sqrt(3.0) * 0.5 * vPosition + 0.5;
       }
   </script>
   <script id="fragment-shader-2" type="x-shader/x-fragment">
       precision mediump float;
-      varying vec3 fColor;
+      varying vec3 fVarColour;
 
       void main() {
-          gl_FragColor = vec4(fColor, 1);
+          gl_FragColor = vec4(fVarColour, 1);
       }
   </script>
   <script type="text/javascript" src="./exercise02.js"></script>

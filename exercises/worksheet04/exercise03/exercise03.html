@@ -14,7 +14,7 @@
 <body>
   <center>
       <h2>Worksheet 04 for course 02561 E23 - Exercise 3 by Jonatan Rasmussen s183649</h2>
-      <canvas id="canvas3" width="512" height="512">Please use a browser supporting HTML5</canvas>
+      <canvas id="canvas_C" width="512" height="512">Please use a browser supporting HTML5</canvas>
       <p>
           Subdivision level: &nbsp; &nbsp;
           <button id="increase_subdivision3" class="btn btn-success">Increase</button>
@@ -29,14 +29,14 @@
   <script type="text/javascript" src="../../common/initShaders.js"></script>
   <script type="text/javascript" src="../../common/MV.js"></script>
 
-  <!-- PART 3 -->
+  <!-- script 3 -->
   <script id="vertex-shader-3" type="x-shader/x-vertex">
       attribute vec3 vPosition;
       uniform mat4 vMatrix;
-      varying vec3 fColor;
+      varying vec3 fVarColour;
 
       // diffuse light
-      vec3 lightDirection = vec3(0, 0, -1);
+      vec3 lghtDir = vec3(0, 0, -1);
       vec3 lightColor = vec3(1, 1, 1);
       vec3 diffuse = vec3(1, 1, 1);
 
@@ -48,18 +48,18 @@
           //vec3 baseColor = vec3(0, 0, 1);
 
           // vPosition is the normal to the surface as it is a unit sphere
-          vec3 lightPosition = -lightDirection;
+          vec3 lightPosition = -lghtDir;
           float intensity = max(0.0, dot(vPosition, lightPosition));
 
-          fColor = intensity * diffuse * lightColor * baseColor;
+          fVarColour = intensity * diffuse * lightColor * baseColor;
       }
   </script>
   <script id="fragment-shader-3" type="x-shader/x-fragment">
       precision mediump float;
-      varying vec3 fColor;
+      varying vec3 fVarColour;
 
       void main() {
-          gl_FragColor = vec4(fColor, 1);
+          gl_FragColor = vec4(fVarColour, 1);
       }
   </script>
   <script type="text/javascript" src="./exercise03.js"></script>

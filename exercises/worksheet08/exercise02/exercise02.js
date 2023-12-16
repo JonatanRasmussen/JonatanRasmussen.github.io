@@ -20,7 +20,7 @@ function createEmptyArrayBuffer(gl, program, var_name, num, type) {
 
 function context() {
     // Prepare WebGL
-    let canvas = document.getElementById("canvas2");
+    let canvas = document.getElementById("canvas_B");
     let gl = setupWebGL(canvas);
 
     // Load shaders
@@ -102,15 +102,15 @@ function context() {
 
         // perspective
         {
-            let perspectiveMatrix = perspective(90, 1, 1, 20);
-            let uLocation = gl.getUniformLocation(program, 'perspective');
-            gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+            let pspMtrx = perspective(90, 1, 1, 20);
+            let u_var_Loc = gl.getUniformLocation(program, 'perspective');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
         }
 
         // render terrain
         {
-            let uLocation = gl.getUniformLocation(program, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
             gl.uniform1i(gl.getUniformLocation(program, "texture"), 0);
             gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_BYTE, 0);
         }
@@ -123,8 +123,8 @@ function context() {
                 translate(-lightX, -lightY, -lightZ)
             ].reduce(mult);
 
-            let uLocation = gl.getUniformLocation(program, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(modelViewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(modelViewMatrix));
 
             gl.uniform1i(gl.getUniformLocation(program, "texture"), 1);
             gl.drawElements(gl.TRIANGLES, indices.length - 6, gl.UNSIGNED_BYTE, 6);
@@ -132,8 +132,8 @@ function context() {
 
         // render polygons
         {
-            let uLocation = gl.getUniformLocation(program, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
 
             gl.uniform1i(gl.getUniformLocation(program, "texture"), 1);
             gl.drawElements(gl.TRIANGLES, indices.length - 6, gl.UNSIGNED_BYTE, 6);

@@ -44,7 +44,7 @@ function createChessboard() {
 
 function context() {
     // Prepare WebGL
-    let canvas = document.getElementById("canvas1");
+    let canvas = document.getElementById("canvas_A");
     let gl = setupWebGL(canvas);
 
     // Load shaders
@@ -112,11 +112,11 @@ function context() {
         gl.clearColor(0.79, 0.7, 0.61, 1.0);
         gl.clear(gl.COLOR_BUFFER_BIT);
 
-        let perspectiveMatrix = perspective(90, 1, 1, 20);
+        let pspMtrx = perspective(90, 1, 1, 20);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'perspective');
-            gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'perspective');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
         }
 
         gl.uniform1i(gl.getUniformLocation(program, "texture"), 0);
@@ -129,8 +129,8 @@ function context() {
     }
 
     {
-        let uLocation = gl.getUniformLocation(program, 'modelView');
-        gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+        let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+        gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
     }
 
     window.requestAnimationFrame(render);

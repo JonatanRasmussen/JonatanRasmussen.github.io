@@ -8,7 +8,7 @@ function setupWebGL(canvasElement) {
 
 function renderContext() {
 
-    var canvasEl = document.getElementById("canvas2");
+    var canvasEl = document.getElementById("canvas_B");
     var webGLContext = setupWebGL(canvasEl);
 
     var shaderProgram = initShaders(webGLContext, "vertex-shader-1", "fragment-shader-1");
@@ -93,8 +93,8 @@ function renderContext() {
         ].reduce(mult);
 
 
-        let uLocation1 = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
-        webGLContext.uniformMatrix4fv(uLocation1, false, flatten(viewMatrix1));
+        let u_var_Loc1 = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
+        webGLContext.uniformMatrix4fv(u_var_Loc1, false, flatten(viewMatrix1));
         webGLContext.drawElements(webGLContext.LINES, indicesArray.length, webGLContext.UNSIGNED_BYTE, 0);
 
         // 2
@@ -106,8 +106,8 @@ function renderContext() {
             lookAt(vec3(0.1, .7, 1), vec3(.5, .5, .5), vec3(0, 1, 0))
         ].reduce(mult);
 
-        let uLocation2 = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
-        webGLContext.uniformMatrix4fv(uLocation2, false, flatten(viewMatrix2));
+        let u_var_Loc2 = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
+        webGLContext.uniformMatrix4fv(u_var_Loc2, false, flatten(viewMatrix2));
         webGLContext.drawElements(webGLContext.LINES, indicesArray.length, webGLContext.UNSIGNED_BYTE, 0);
 
         // 3
@@ -119,8 +119,8 @@ function renderContext() {
             lookAt(vec3(0, 1, 1), vec3(.5, .5, .5), vec3(0, 1, 0))
         ].reduce(mult);
 
-        let uLocation3 = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
-        webGLContext.uniformMatrix4fv(uLocation3, false, flatten(viewMatrix3));
+        let u_var_Loc3 = webGLContext.getUniformLocation(shaderProgram, 'vMatrix');
+        webGLContext.uniformMatrix4fv(u_var_Loc3, false, flatten(viewMatrix3));
         webGLContext.drawElements(webGLContext.LINES, indicesArray.length, webGLContext.UNSIGNED_BYTE, 0);
     }
 

@@ -101,7 +101,7 @@ function context() {
     // TEAPOT SHADERS
 
     // Prepare WebGL
-    var canvas = document.getElementById("canvas2");
+    var canvas = document.getElementById("canvas_B");
     var gl = setupWebGL(canvas);
 
     // Load shaders
@@ -273,11 +273,11 @@ function context() {
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, groundModel.indexBuffer);
 
         {
-            let uLocation = gl.getUniformLocation(shadowProgram, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(shadowProgram, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
         } {
-            let uLocation = gl.getUniformLocation(shadowProgram, 'perspective');
-            gl.uniformMatrix4fv(uLocation, false, flatten(lightPerspective));
+            let u_var_Loc = gl.getUniformLocation(shadowProgram, 'perspective');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(lightPerspective));
         }
 
         gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_BYTE, 0);
@@ -303,11 +303,11 @@ function context() {
             gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, teapotModel.indexBuffer);
 
             {
-                let uLocation = gl.getUniformLocation(shadowProgram, 'modelView');
-                gl.uniformMatrix4fv(uLocation, false, flatten(teapotModelView));
+                let u_var_Loc = gl.getUniformLocation(shadowProgram, 'modelView');
+                gl.uniformMatrix4fv(u_var_Loc, false, flatten(teapotModelView));
             } {
-                let uLocation = gl.getUniformLocation(shadowProgram, 'perspective');
-                gl.uniformMatrix4fv(uLocation, false, flatten(lightPerspective));
+                let u_var_Loc = gl.getUniformLocation(shadowProgram, 'perspective');
+                gl.uniformMatrix4fv(u_var_Loc, false, flatten(lightPerspective));
             }
 
             gl.drawElements(gl.TRIANGLES, g_drawingInfo.indices.length, gl.UNSIGNED_SHORT, 0);
@@ -323,7 +323,7 @@ function context() {
             gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, teapotModel.indexBuffer);
 
             let uModelViewLocation = gl.getUniformLocation(teapotProgram, 'modelView');
-            let uPerspectiveLocation = gl.getUniformLocation(teapotProgram, 'perspectiveMatrix');
+            let uPerspectiveLocation = gl.getUniformLocation(teapotProgram, 'pspMtrx');
 
             gl.uniformMatrix4fv(uModelViewLocation, false, flatten(teapotModelView));
             gl.uniformMatrix4fv(uPerspectiveLocation, false, flatten(cameraPerspective));
@@ -355,17 +355,17 @@ function context() {
 
         // ground matrices
         {
-            let uLocation = gl.getUniformLocation(groundProgram, 'perspective');
-            gl.uniformMatrix4fv(uLocation, false, flatten(cameraPerspective));
+            let u_var_Loc = gl.getUniformLocation(groundProgram, 'perspective');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(cameraPerspective));
         } {
-            let uLocation = gl.getUniformLocation(groundProgram, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(groundProgram, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
         } {
-            let uLocation = gl.getUniformLocation(groundProgram, 'lightModelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(mat4()));
+            let u_var_Loc = gl.getUniformLocation(groundProgram, 'lightModelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(mat4()));
         } {
-            let uLocation = gl.getUniformLocation(groundProgram, 'lightPerspective');
-            gl.uniformMatrix4fv(uLocation, false, flatten(lightPerspective));
+            let u_var_Loc = gl.getUniformLocation(groundProgram, 'lightPerspective');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(lightPerspective));
         }
 
         if (!seeLight) {

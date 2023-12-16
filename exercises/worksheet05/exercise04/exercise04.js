@@ -17,9 +17,9 @@ function createEmptyArrayBuffer(gl, a_attribute, num, type) {
 
 function initVertexBuffers(gl, program) {
     return {
-        vertexBuffer: createEmptyArrayBuffer(gl, program.a_Position, 3, gl.FLOAT),
-        normalBuffer: createEmptyArrayBuffer(gl, program.a_Normal, 3, gl.FLOAT),
-        colorBuffer: createEmptyArrayBuffer(gl, program.a_Color, 4, gl.FLOAT),
+        vertexBuffer: createEmptyArrayBuffer(gl, program.a_var_Pos, 3, gl.FLOAT),
+        normalBuffer: createEmptyArrayBuffer(gl, program.a_var_Nml, 3, gl.FLOAT),
+        colorBuffer: createEmptyArrayBuffer(gl, program.a_var_Colour, 4, gl.FLOAT),
         indexBuffer: gl.createBuffer()
     }
 }
@@ -72,16 +72,16 @@ function context() {
     }
 
     // Prepare WebGL
-    var canvas = document.getElementById("canvas4");
+    var canvas = document.getElementById("canvas_D");
     var gl = setupWebGL(canvas);
 
     // Load shaders
     var program = initShaders(gl, "vertex-shader-4", "fragment-shader-4");
     gl.useProgram(program);
 
-    program.a_Position = gl.getAttribLocation(program, 'a_Position');
-    program.a_Normal = gl.getAttribLocation(program, 'a_Normal');
-    program.a_Color = gl.getAttribLocation(program, 'a_Color');
+    program.a_var_Pos = gl.getAttribLocation(program, 'a_var_Pos');
+    program.a_var_Nml = gl.getAttribLocation(program, 'a_var_Nml');
+    program.a_var_Colour = gl.getAttribLocation(program, 'a_var_Colour');
 
     var model = initVertexBuffers(gl, program);
     readOBJFile('./teapot/teapot.obj', 1, false);
@@ -97,14 +97,14 @@ function context() {
             rotateY(time / 61),
         ].reduce(mult);
 
-        var perspectiveMatrix = perspective(75, 1, 1, 100);
+        var pspMtrx = perspective(75, 1, 1, 100);
 
         {
-            let uLocation = gl.getUniformLocation(program, 'modelView');
-            gl.uniformMatrix4fv(uLocation, false, flatten(modelViewMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'modelView');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(modelViewMatrix));
         } {
-            let uLocation = gl.getUniformLocation(program, 'perspectiveMatrix');
-            gl.uniformMatrix4fv(uLocation, false, flatten(perspectiveMatrix));
+            let u_var_Loc = gl.getUniformLocation(program, 'pspMtrx');
+            gl.uniformMatrix4fv(u_var_Loc, false, flatten(pspMtrx));
         }
 
         if (!g_drawingInfo && g_objDoc && g_objDoc.isMTLComplete()) {
@@ -133,13 +133,13 @@ function context() {
         };
 
         for (key in uniforms) {
-            let uLocation = gl.getUniformLocation(program, key);
-            gl.uniform1f(uLocation, uniforms[key]);
+            let u_var_Loc = gl.getUniformLocation(program, key);
+            gl.uniform1f(u_var_Loc, uniforms[key]);
         }
 
         {
-            let uLocation = gl.getUniformLocation(program, 'lightEmission');
-            gl.uniform3fv(uLocation, uniforms['emission']);
+            let u_var_Loc = gl.getUniformLocation(program, 'lightEmission');
+            gl.uniform3fv(u_var_Loc, uniforms['emission']);
         }
 
         // points
