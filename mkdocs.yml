@@ -1,7 +1,7 @@
-site_name: Nicki Skafte Detlefsen
+site_name: Jonatan Rasmussen
 docs_dir: .
 site_dir: ../site
-repo_url: https://github.com/SkafteNicki/SkafteNicki.github.io
+repo_url: https://github.com/JonatanRasmussen/JonatanRasmussen.github.io
 
 theme:
   language: en
@@ -57,14 +57,15 @@ plugins:
 extra:
   social:
     - icon: material/email
-      link: mailto:skaftenicki@gmail.com
+      link: mailto:jonatan.j.k.rasmussen@gmail.com
     - icon: fontawesome/brands/github
-      link: https://github.com/SkafteNicki
+      link: https://github.com/JonatanRasmussen
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/nicki-skafte-detlefsen/
-    - icon: simple/googlescholar
+      link: https://www.linkedin.com/in/jonatan-rasmussen-b07193267/
+    - icon: fontawesome/brands/youtube
       link: https://scholar.google.dk/citations?hl=en&user=0v4MJq8AAAAJ
 
 nav:
   - Home: README.md
-
+  - Code: code.md
+  - CV: cv.md

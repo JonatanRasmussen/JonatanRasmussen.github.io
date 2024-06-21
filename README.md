@@ -6,6 +6,6 @@ hide:
 
 # Welcome
 
-![Image title](images/jonatan_rasmussen.jpg){ width="300", align=right }
+![Image title](images/jonatan_rasmussen.jpg){ width="310", align=right }
 
 This is WIP 😀
