@@ -14,14 +14,14 @@ theme:
       primary: light blue
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Switch to Dark Mode
 
     # Palette toggle for dark mode
     - scheme: slate
       primary: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to Light Mode
   features:
     - navigation.instant
     - navigation.indexes
@@ -63,7 +63,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jonatan-rasmussen-b07193267/
     - icon: fontawesome/brands/youtube
-      link: https://scholar.google.dk/citations?hl=en&user=0v4MJq8AAAAJ
+      link: https://www.youtube.com/@jonatanrasmussen
 
 nav:
   - Home: README.md
