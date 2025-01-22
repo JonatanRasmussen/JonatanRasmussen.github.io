@@ -28,12 +28,30 @@ This hobby project has been independently developed in my spare time and has not
 [Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="200" }
 </div>
 
+<div class="grid" markdown>
+<div markdown>
+[Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="150" }
+</div>
+<div markdown>
+[Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="150" }
+</div>
+<div markdown>
+[Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="150" }
+</div>
+<div markdown>
+[Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="150" }
+</div>
+<div markdown>
+[Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="150" }
+</div>
+</div>
+
 <div class="grid cards" markdown>
-- ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG)
-- ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG)
-- ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG)
-- ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG)
-- ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG)
+- ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="50"}
+- ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="50"}
+- ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="50"}
+- ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="50"}
+- ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="50"}
 </div>
 
 ## World of Warcraft interface addon */say Callouts M+*
