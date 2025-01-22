@@ -34,8 +34,13 @@ This hobby project has been independently developed in my spare time and has not
 
 I am the author and current maintainer of World of Warcraft custom mod */say Callouts M+*. It uses the WeakAuras framework to alert players about dangerous `combat_log_events`.
 
-*As of January 2025, [it has over 12000 views, 1100 downloads and 150 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
+*As of January 2025, it has [over 12000 views, 1100 downloads and 150 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
 
+<div class="grid cards" style="grid-template-columns: repeat(5, 1fr);" markdown>
+- ![Screenshot 1](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot1.PNG){ width="256"}
+- ![Screenshot 2](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot2.PNG){ width="256"}
+- ![Screenshot 3](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot3.PNG){ width="256"}
+</div>
 
 ## Other noteworthy projects (non-programming)
 
