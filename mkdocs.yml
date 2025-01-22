@@ -33,23 +33,23 @@ theme:
     - content.code.copy
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - md_in_html
-  - admonition
-  - pymdownx.details
+  - pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
   - pymdownx.tabbed:
       alternate_style: true
-  - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
 
@@ -70,9 +70,6 @@ extra:
 
 nav:
   - Home: README.md
-  - Code: code.md
+  - Project: projects_main.md
   - CV: cv.md
-  - Creations:
-    - Overview: creations/index.md
-    - Reddit: creations/reddit.md
-    - YouTube: creations/youtube.md
+  - Personal Archive: personal_archive.md
