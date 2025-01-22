@@ -55,10 +55,10 @@ This hobby project has been independently developed in my spare time and has not
 </div>
 
 <div class="grid cards" style="grid-template-columns: repeat(2, 1fr);" markdown>
-- ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="50"}
-  Course Overview
-- ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="50"}
-  Search Filters
+- [Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="50"}
+  ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="50"}
+- Screenshot 2
+  ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="50"}
 - ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="50"}
   Course Details
 - ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="50"}
