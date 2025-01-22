@@ -14,11 +14,6 @@ Most of my projects are publicly available on [my Github profile](https://github
 
 ---
 
-<div style="background-color: #ffeb3b; padding: 10px; border-radius: 5px; text-align: left;">
-    ## DTU Course Browser website
-</div>
-
-
 ## DTU Course Browser website
 <div class="grid" markdown>
 <div class="grid-item" markdown>
@@ -43,7 +38,7 @@ This hobby project has been independently developed in my spare time and has not
 
 ---
 
-<div style="background-color: #ffeb3b; padding: 10px; border-radius: 5px; text-align: left;">
+<div style="background-color: #dddddd; padding: 10px; border-radius: 5px; text-align: left;">
     <h2>World of Warcraft interface addon <em>/say Callouts M+</em></h2>
 </div>
 
