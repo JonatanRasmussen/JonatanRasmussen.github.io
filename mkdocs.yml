@@ -28,6 +28,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.top
     - navigation.expand
     - content.code.copy
 
@@ -72,6 +73,6 @@ nav:
   - Code: code.md
   - CV: cv.md
   - Creations:
-    - creations/index.md
+    - Overview: creations/index.md
     - Reddit: creations/reddit.md
     - YouTube: creations/youtube.md
