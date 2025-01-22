@@ -22,15 +22,15 @@ This hobby project has been independently developed in my spare time and has not
 
 <div class="grid cards" style="grid-template-columns: repeat(5, 1fr);" markdown>
 - [Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG)
-  ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="32"}
+  ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ heigth="16"}
 - [Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG)
-  ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="32"}
+  ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ heigth="16"}
 - [Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG)
-  ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="32"}
+  ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ heigth="16"}
 - [Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG)
-  ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="32"}
+  ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ heigth="16"}
 - [Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG)
-  ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="32"}
+  ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ heigth="16"}
 </div>
 
 ## World of Warcraft interface addon */say Callouts M+*
