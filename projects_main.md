@@ -16,7 +16,17 @@ Most of my projects are publicly available on [my Github profile](https://github
 
 I webscrabed all public course data at my university (DTU) and gathered all of it on a single website for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
-*As of January 2025, [my announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) for my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU, with the site maintaining consistent user engagement since launch."*
+This hobby project has been independently developed in my spare time and has not been part of any DTU course.
+
+*As of January 2025, [my announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) for my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU, with the site maintaining consistent user engagement since launch.*
+
+<div style="text-align: center">
+[Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="200" }
+[Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="200" }
+[Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="200" }
+[Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="200" }
+[Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="200" }
+</div>
 
 <div class="grid cards" markdown>
 - ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG)
