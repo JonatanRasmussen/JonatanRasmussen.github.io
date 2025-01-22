@@ -54,27 +54,17 @@ This hobby project has been independently developed in my spare time and has not
 - ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="50"}
 </div>
 
-<div class="grid" style="grid-template-columns: repeat(2, 1fr);" markdown>
-- <div>
-    ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="50" }
-    **Screenshot 1**
-  </div>
-- <div>
-    ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="50" }
-    **Screenshot 2**
-  </div>
-- <div>
-    ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="50" }
-    **Screenshot 3**
-  </div>
-- <div>
-    ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="50" }
-    **Screenshot 4**
-  </div>
-- <div>
-    ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="50" }
-    **Screenshot 5**
-  </div>
+<div class="grid cards" style="grid-template-columns: repeat(2, 1fr);" markdown>
+- ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="50"}
+  Course Overview
+- ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="50"}
+  Search Filters
+- ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="50"}
+  Course Details
+- ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="50"}
+  Evaluation Summary
+- ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="50"}
+  Statistics
 </div>
 
 ## World of Warcraft interface addon */say Callouts M+*
