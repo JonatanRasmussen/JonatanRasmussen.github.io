@@ -38,10 +38,6 @@ This hobby project has been independently developed in my spare time and has not
 
 ---
 
-<div style="background-color: #dddddd; padding: 10px; border-radius: 5px; text-align: left;">
-    <h2>World of Warcraft interface addon <em>/say Callouts M+</em></h2>
-</div>
-
 ## World of Warcraft interface addon */say Callouts M+*
 <div class="grid" markdown>
 <div class="grid-item" markdown>
