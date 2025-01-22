@@ -23,3 +23,8 @@ Check out a highlight of my software projects here: [Github Projects](projects_m
 Link: <https://github.com/JonatanRasmussen/dtu-course-browser>
 
 *DTU Course Browser* I webscrabed all public course data at my university (DTU) and gathered all of it [on a single website](https://dtucourseanalyzer.pythonanywhere.com/) for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
+
+<br>
+<br>
+<br>
+<br>

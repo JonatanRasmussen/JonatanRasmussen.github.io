@@ -46,5 +46,7 @@ I am the author and current maintainer of World of Warcraft custom mod */say Cal
 
 Check out my personal projects and creations that aren't programming related: [Creations and Community Contributions](projects_other.md).
 
-
-
+<br>
+<br>
+<br>
+<br>

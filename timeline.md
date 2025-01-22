@@ -10,3 +10,8 @@ The following is a highlight of my contributions to various online communities. 
 
 - [Reddit](reddit.md)
 - [YouTube](youtube.md)
+
+<br>
+<br>
+<br>
+<br>
