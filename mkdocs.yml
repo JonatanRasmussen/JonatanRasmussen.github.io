@@ -70,6 +70,6 @@ extra:
 
 nav:
   - Home: README.md
-  - Project: projects_main.md
+  - Projects: projects_main.md
   - CV: cv.md
   - Personal Archive: personal_archive.md

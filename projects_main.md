@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Projects
+# Highlighted Projects
 
 Github profile: <https://github.com/JonatanRasmussen>
 
@@ -14,8 +14,10 @@ Most of my hobby projects are publicly available on github! The following list i
 
 Link: <https://github.com/JonatanRasmussen/dtu-course-browser>
 
-*DTU Course Browser* I webscrabed all public course data at my university (DTU) and gathered all of it [on a single website](https://dtucourseanalyzer.pythonanywhere.com/) for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
+*As of January 2025, my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU*
+
+I webscrabed all public course data at my university (DTU) and gathered all of it [on a single website](https://dtucourseanalyzer.pythonanywhere.com/) for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
 ## Other noteworthy projects (non-programming)
 
-Feel free to also check out my personal projects and creations that aren't programming related: [Creations and Community Contributions](projects_other.md).
+Check out my personal projects and creations that aren't programming related: [Creations and Community Contributions](projects_other.md).
