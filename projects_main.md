@@ -32,7 +32,7 @@ I webscrabed all public course data at my university (DTU) and gathered all of i
 
 I am the author and current maintainer of World of Warcraft custom mod */say Callouts M+*. It uses the WeakAuras framework to alert players about dangerous `combat_log_events`.
 
-*As of January 2025, [it has over 12000 views, 1100 downloads and 153 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
+*As of January 2025, [it has over 12000 views, 1100 downloads and 150 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
 
 
 ## Other noteworthy projects (non-programming)
