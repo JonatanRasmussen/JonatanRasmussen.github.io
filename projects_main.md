@@ -8,9 +8,13 @@ hide:
 
 Most of my projects are publicly available on [my Github profile](https://github.com/JonatanRasmussen)! The following is a highlight of my best projects:
 
+- **DTU Course Browser website**: A comprehensive course data analysis tool for DTU students
+- **WoW /say Callouts M+**: A popular World of Warcraft interface addon
+- **Other projects**: Non-programming related creations and contributions
+
 ---
 
-## DTU Course Browser
+## DTU Course Browser website
 <div class="grid" markdown>
 <div class="grid-item" markdown>
 
