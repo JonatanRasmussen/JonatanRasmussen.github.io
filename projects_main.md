@@ -8,7 +8,6 @@ hide:
 
 Most of my projects are publicly available on [my Github profile](https://github.com/JonatanRasmussen)! The following is a highlight of my best projects:
 
-<div style="background-color: #990000; padding: 10px; border-radius: 5px; text-align: center;">
 ## DTU Course Browser
 
 [Github repository](https://github.com/JonatanRasmussen/dtu-course-browser)
@@ -28,9 +27,6 @@ This hobby project has been independently developed in my spare time and has not
 - ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="256"}
 - ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="256"}
 </div>
-</div>
-
-
 
 ## World of Warcraft interface addon */say Callouts M+*
 
@@ -49,3 +45,6 @@ I am the author and current maintainer of World of Warcraft custom mod */say Cal
 ## Other noteworthy projects (non-programming)
 
 Check out my personal projects and creations that aren't programming related: [Creations and Community Contributions](projects_other.md).
+
+
+
