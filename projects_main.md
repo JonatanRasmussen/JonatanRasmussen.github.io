@@ -16,7 +16,7 @@ Most of my projects are publicly available on [my Github profile](https://github
 
 I webscrabed all public course data at my university (DTU) and gathered all of it on a single website for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
-*As of January 2025, [my announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) for 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU*
+*As of January 2025, [my announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) for my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU, with the site maintaining consistent user engagement since launch."*
 
 <div class="grid cards" markdown>
 - ![Screenshot 1](./images/projects_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG)
@@ -25,6 +25,15 @@ I webscrabed all public course data at my university (DTU) and gathered all of i
 - ![Screenshot 4](./images/projects_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG)
 - ![Screenshot 5](./images/projects_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG)
 </div>
+
+## World of Warcraft interface addon */say Callouts M+*
+
+[Link to Weakaura page](https://wago.io/6CDe7U7t6)
+
+I am the author and current maintainer of World of Warcraft custom mod */say Callouts M+*. It uses the WeakAuras framework to alert players about dangerous `combat_log_events`.
+
+*As of January 2025, [it has over 12000 views, 1100 downloads and 153 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
+
 
 ## Other noteworthy projects (non-programming)
 
