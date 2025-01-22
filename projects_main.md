@@ -8,11 +8,13 @@ hide:
 
 Most of my projects are publicly available on [my Github profile](https://github.com/JonatanRasmussen)! The following is a highlight of my best projects:
 
+---
+
 ## DTU Course Browser
+<div class="grid" markdown>
+<div class="grid-item" markdown>
 
-[Github repository](https://github.com/JonatanRasmussen/dtu-course-browser)
-
-[Link to website](https://dtucourseanalyzer.pythonanywhere.com/)
+[Github repository](https://github.com/JonatanRasmussen) | [Live website](https://dtucourseanalyzer.pythonanywhere.com/)
 
 I webscrabed all public course data at my university (DTU) and gathered all of it on a single website for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
@@ -27,8 +29,14 @@ This hobby project has been independently developed in my spare time and has not
 - ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="256"}
 - ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="256"}
 </div>
+</div>
+</div>
+
+---
 
 ## World of Warcraft interface addon */say Callouts M+*
+<div class="grid" markdown>
+<div class="grid-item" markdown>
 
 [Link to Weakaura page](https://wago.io/6CDe7U7t6)
 
@@ -41,6 +49,10 @@ I am the author and current maintainer of World of Warcraft custom mod */say Cal
 - ![Screenshot 2](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot2.PNG){ width="256"}
 - ![Screenshot 3](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot3.PNG){ width="256"}
 </div>
+</div>
+</div>
+
+---
 
 ## Other noteworthy projects (non-programming)
 

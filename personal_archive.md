@@ -31,7 +31,7 @@ hide:
 
 > NOTICE: PERSONAL FILES AHEAD
 
-<div style="background-color: #ffeb3b; padding: 10px; border-radius: 5px; text-align: center;">
+<div style="background-color: #ffeb3b; padding: 10px; border-radius: 5px; text-align: left;">
     <strong>NOTICE: PERSONAL FILES AHEAD</strong>
 </div>
 
