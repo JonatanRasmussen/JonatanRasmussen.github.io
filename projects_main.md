@@ -27,11 +27,11 @@ This hobby project has been independently developed in my spare time and has not
 *As of January 2025, [my announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) for my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU, with the site maintaining consistent user engagement since launch.*
 
 <div class="grid cards" style="grid-template-columns: repeat(5, 1fr);" markdown>
-- ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="256"}
-- ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="256"}
-- ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="256"}
-- ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="256"}
-- ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="256"}
+- ![Screenshot 1](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG){ width="128"}
+- ![Screenshot 2](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot2.PNG){ width="128"}
+- ![Screenshot 3](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot3.PNG){ width="128"}
+- ![Screenshot 4](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot4.PNG){ width="128"}
+- ![Screenshot 5](/images/project_screenshots/dtu_course_analyzer/course_analyzer_screenshot5.PNG){ width="128"}
 </div>
 </div>
 </div>
@@ -49,9 +49,9 @@ I am the author and current maintainer of World of Warcraft custom mod */say Cal
 *As of January 2025, it has [over 12000 views, 1100 downloads and 150 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
 
 <div class="grid cards" style="grid-template-columns: repeat(5, 1fr);" markdown>
-- ![Screenshot 1](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot1.PNG){ width="256"}
-- ![Screenshot 2](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot2.PNG){ width="256"}
-- ![Screenshot 3](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot3.PNG){ width="256"}
+- ![Screenshot 1](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot1.PNG){ width="128"}
+- ![Screenshot 2](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot2.PNG){ width="128"}
+- ![Screenshot 3](/images/project_screenshots/wow_say_callouts_mplus/wa_screenshot3.PNG){ width="128"}
 </div>
 </div>
 </div>
