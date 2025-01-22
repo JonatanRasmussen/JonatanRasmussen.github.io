@@ -18,6 +18,14 @@ Link: <https://github.com/JonatanRasmussen/dtu-course-browser>
 
 I webscrabed all public course data at my university (DTU) and gathered all of it [on a single website](https://dtucourseanalyzer.pythonanywhere.com/) for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
+<div class="grid cards" markdown>
+- ![Screenshot 1](course_analyzer_screenshot1.PNG)
+- ![Screenshot 2](course_analyzer_screenshot2.PNG)
+- ![Screenshot 3](course_analyzer_screenshot3.PNG)
+- ![Screenshot 4](course_analyzer_screenshot4.PNG)
+- ![Screenshot 5](course_analyzer_screenshot5.PNG)
+</div>
+
 ## Other noteworthy projects (non-programming)
 
 Check out my personal projects and creations that aren't programming related: [Creations and Community Contributions](projects_other.md).
