@@ -16,7 +16,7 @@ Most of my projects are publicly available on [my Github profile](https://github
 
 I webscrabed all public course data at my university (DTU) and gathered all of it on a single website for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
-*As of January 2025, my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU*
+*As of January 2025, [my announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) for 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU*
 
 <div class="grid cards" markdown>
 - ![Screenshot 1](/images/projects_screenshots/dtu_course_analyzer/course_analyzer_screenshot1.PNG)
