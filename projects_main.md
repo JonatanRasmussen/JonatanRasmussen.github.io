@@ -6,15 +6,13 @@ hide:
 
 # Highlighted projects
 
-Github profile: <https://github.com/JonatanRasmussen>
-
-Most of my projects are publicly available on github! The following is a highlight of my best projects:
+Most of my projects are publicly available on [my Github profile](https://github.com/JonatanRasmussen)! The following is a highlight of my best projects:
 
 ## DTU Course Browser
 
-Github link: <https://github.com/JonatanRasmussen/dtu-course-browser>
+[Github repository](https://github.com/JonatanRasmussen/dtu-course-browser)
 
-Website link: <https://dtucourseanalyzer.pythonanywhere.com/>
+[Link to website](https://dtucourseanalyzer.pythonanywhere.com/)
 
 I webscrabed all public course data at my university (DTU) and gathered all of it on a single website for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 

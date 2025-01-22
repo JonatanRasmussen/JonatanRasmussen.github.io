@@ -6,15 +6,17 @@ hide:
 
 # Creations and Community Contributions
 
-Github profile: <https://github.com/JonatanRasmussen>
-YouTube profile: <https://www.youtube.com/@jonatanrasmussen>
-LinkedIn profile: <https://www.linkedin.com/in/jonatan-rasmussen-b07193267/>
+Github profile: [Link](https://github.com/JonatanRasmussen)
+
+YouTube profile: [Link](https://www.youtube.com/@jonatanrasmussen)
+
+LinkedIn profile: [Link](https://www.linkedin.com/in/jonatan-rasmussen-b07193267/)
 
 This page is a highlight of my proudest creations and community contributions:
 
 ## Software projects (programming)
 
-Check out all my software projects here: [Github Projects](projects_main.md).
+Check out a highlight of my software projects here: [Github Projects](projects_main.md).
 
 ## DTU Course Browser
 
