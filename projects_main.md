@@ -12,11 +12,12 @@ Most of my hobby projects are publicly available on github! The following list i
 
 ## DTU Course Browser
 
-Link: <https://github.com/JonatanRasmussen/dtu-course-browser>
+GitHub link: <https://github.com/JonatanRasmussen/dtu-course-browser>
+Website link: <https://dtucourseanalyzer.pythonanywhere.com/>
 
 *As of January 2025, my 'DTU Course Analyzer' website is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU*
 
-I webscrabed all public course data at my university (DTU) and gathered all of it [on a single website](https://dtucourseanalyzer.pythonanywhere.com/) for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
+I webscrabed all public course data at my university (DTU) and gathered all of it on a single website for anyone to browse. My website also offers more in-depth search filters than the official DTU websites as well as evaluation summaries and overviews.
 
 <div class="grid cards" markdown>
 - ![Screenshot 1](course_analyzer_screenshot1.PNG)
