@@ -27,6 +27,8 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
     - content.code.copy
 
 markdown_extensions:
@@ -70,5 +72,6 @@ nav:
   - Code: code.md
   - CV: cv.md
   - Creations:
+    - creations/index.md
     - Reddit: creations/reddit.md
     - YouTube: creations/youtube.md
