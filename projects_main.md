@@ -6,15 +6,15 @@ hide:
 
 # Noteworthy projects
 
-The following is a highlight of my best projects, fully released to the public *and used by thousands of people.*
+The following is my most influential projects, fully released and *publicly used by thousands of people.*
 
-**DTU Course Browser website**: A highly popular course analysis tool for DTU. I webscrabed all public DTU course data and made a website with advanced search filters and grade/evaluation statistics that are otherwise unavailable on the official DTU website.
+**DTU Course Browser website**: A highly popular course analysis tool. I webscrabed all public DTU course data and made a website with advanced search filters and grade/evaluation statistics that are otherwise unavailable on the official DTU website.
 
 - [Github repository](https://github.com/JonatanRasmussen) | [Live website](https://dtucourseanalyzer.pythonanywhere.com/)
 - *The site receives daily traffic and is kind of a big deal – as of April 2025, [my website announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU (a forum with daily submissions, created in 2011).*
-- *The site receives 100.000+ page hits per month, however this is misleading since 1 site visit creates several hundreds of page hits.*
+- *I don't use Google Analytics, but the site registers 100.000+ page hits per month (this is misleading however, as some user input triggers duplicate page hits).*
 
-**WoW /say Callouts M+**: A World of Warcraft game interface addon with 1100+ downloads. I am the original author and current maintainer of World of Warcraft custom mod */say Callouts M+* which uses the WeakAuras framework to alert players about dangerous `combat_log_events`.
+**WoW /say Callouts M+**: I am the original author and current maintainer of World of Warcraft game interface addon */say Callouts M+* which uses the WeakAuras framework to alert players about dangerous `combat_log_events`.
 
 - [Link to Weakaura page](https://wago.io/6CDe7U7t6)
 - *As of April 2025, it has [over 12000 views, 1100 downloads and 150 stars](https://wago.io/6CDe7U7t6). I update it twice a year to support the newest gameplay content.*
