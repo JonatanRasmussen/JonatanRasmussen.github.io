@@ -8,7 +8,7 @@ hide:
 
 The following is a highlight of my best projects, fully released to the public *and used by thousands of people.*
 
-**DTU Course Browser website**: A highly popular course analysis tool for DTU. I webscrabed all public DTU course data and put it on a website, giving students access to search filters and grade/evaluation statistics that are otherwise unavailable on the official DTU website.
+**DTU Course Browser website**: A highly popular course analysis tool for DTU. I webscrabed all public DTU course data and made a website with advanced search filters and grade/evaluation statistics that are otherwise unavailable on the official DTU website.
 
 - [Github repository](https://github.com/JonatanRasmussen) | [Live website](https://dtucourseanalyzer.pythonanywhere.com/)
 - *The site receives daily traffic and is kind of a big deal – as of April 2025, [my website announcement post](https://www.reddit.com/r/DTU/comments/1eb9rgv/im_launching_my_dtu_course_analyzer_website_a/) is the [top post of all-time](https://www.reddit.com/r/DTU/top/?sort=top&t=all) on reddit.com/r/DTU (a forum with daily submissions, created in 2011).*
