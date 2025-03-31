@@ -6,7 +6,7 @@ hide:
 
 # Noteworthy projects
 
-The following is my most influential projects, fully released and *publicly used by thousands of people.*
+The following is my most influential projects, fully released and *used by thousands of people.*
 
 **DTU Course Browser website**: A highly popular course analysis tool. I webscrabed all public DTU course data and made a website with advanced search filters and grade/evaluation statistics that are otherwise unavailable via official DTU websites.
 
