@@ -22,7 +22,7 @@ The following is my most influential projects, fully released and *publicly used
 **YouTube channel**: A handful of personal videos about DTU and about life. I average 500-1000 views per video, with one of my most popular videos being a "review" of DTU titled [Min oplevelse på DTU](https://www.youtube.com/watch?v=lt1gV3O6F7o). It has been watched over 9000 times, which I'm quite proud of!
 
 - [Link to YouTube channel](https://www.youtube.com/@jonatanrasmussen) | [Link to video](https://www.youtube.com/watch?v=lt1gV3O6F7o)
-- I use numbers and popularity metrics as social proof, not because I obsess over it. If you have the time, check out each project yourself.
+- *I use numbers and popularity metrics as social proof, not because I obsess over it. If you have the time, check out each project yourself.*
 
 ---
 
